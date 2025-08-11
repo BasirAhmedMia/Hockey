@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hockey</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!--tailwind and daisyui cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind custom classes -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'button': '#FF4240',
+                        'slider-p': 'text-gray-600',
+                        'description': ' rgba(255, 255, 255, 0.60)',
+                        'phone': ' rgba(188, 237, 109, 0.10)',
+                        'email': ' rgba(253, 221, 95, 0.10)',
+                        'map': '  rgba(98, 156, 243, 0.10)',
+                        'star': '  rgba(249, 152, 8, 1)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- custom styles -->
+    <style>
+        .font-manrope {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="font-manrope">
+    <header class="md:container md:mx-auto">
+        <!-- navbar -->
+        <nav>
+            <div class="navbar bg-base-100 py-8 lg:py-20">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Pages</a></li>
+                            <li><a>Blog</a></li>
+                            <li><a>Contact</a></li>
+                            <li><a><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                    </svg></a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-2xl font-extrabold lg:text-4xl">Hockey's</a>
+                </div>
+                <div class="navbar-center hidden lg:flex ">
+                    <ul class="menu menu-horizontal px-1 text-base font-normal text-gray-600">
+                        <li class="text-button  font-bold"><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Pages</a></li>
+                        <li><a>Blog</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end gap-6">
+                    <button class="hidden lg:flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
+                    <a class="btn bg-button text-white text-lg font-bold lg:text-xl">Get Ticket</a>
+                </div>
+            </div>
+        </nav>
+        <!-- slider -->
+        <div class="mx-4">
+            <div class="carousel my-4 lg:relative">
+                <!-- slider 1 -->
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="Images/1.png" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide4" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <!-- slider 2 -->
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img class="rounded-2xl" src="Images/2.jpg" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle">❮</a>
+                        <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full">
+                    <img class="rounded-2xl" src="Images/3.jpg" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle">❮</a>
+                        <a href="#slide1" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+    <main class="md:container md:mx-auto">
+        <!-- professional hockey club -->
+        <section class="mx-4 my-20 lg:my-8  text-center">
+            <hr class="border-dashed border-1  border-gray-200">
+            <div class="space-y-4 my-8">
+                <h2 class="text-xl lg:text-4xl font-extrabold">Professional Hockeys Club</h2>
+                <p class="text-sm lg:text-base font-medium text-slider-p">There's a lot of debate about what a
+                    "professional" facility for all.If you talk to the players and fans, they love it.
+                </p>
+            </div>
+            <hr class="border-dashed border-1  border-gray-200">
+            <div class="mt-20 grid grid-cols-1 gap-4 lg:grid-cols-4 ">
+                <!-- radial progress 1 -->
+                <div class="">
+                    <div class="radial-progress text-error" style="--value:80;" role="progressbar"><span
+                            class="text-black font-bold">80%</span></div>
+                    <h4 class="text-xl font-semibold text-black py-4">Prayer Facility</h4>
+                    <p class="text-base font-normal text-slider-p">We give enough times to people for prayer.
+                        .</p>
+                </div>
+                <!-- radial progress 2 -->
+                <div>
+                    <div class="radial-progress text-accent" style="--value:95;" role="progressbar"><span
+                            class="text-black font-bold">95%</span></div>
+                    <h4 class="text-xl font-semibold text-black py-4">Prayer Facility</h4>
+                    <p class="text-base font-normal text-slider-p">We give enough times to people for prayer.
+                        .</p>
+                </div>
+                <!-- radial progress 3 -->
+                <div>
+                    <div class="radial-progress text-warning" style="--value:70;" role="progressbar"><span
+                            class="text-black font-bold">70%</span></div>
+                    <h4 class="text-xl font-semibold text-black py-4">Prayer Facility</h4>
+                    <p class="text-base font-normal text-slider-p">We give enough times to people for prayer.
+                        .</p>
+                </div>
+                <!-- radial progress 4 -->
+                <div>
+                    <div class="radial-progress text-primary" style="--value:50;" role="progressbar"><span
+                            class="text-black font-bold">50%</span></div>
+                    <h4 class="text-xl font-semibold text-black py-4">Prayer Facility</h4>
+                    <p class="text-base font-normal text-slider-p">We give enough times to people for prayer.
+                        .</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- program section -->
+        <section class="mx-4 my-20 lg:my-8 ">
+            <hr class="border-dashed border-1 mx-4  border-gray-200">
+            <div class="space-y-4 my-8 text-center">
+                <h2 class="text-4xl font-extrabold">Program Sections</h2>
+                <p class="text-base font-medium text-slider-p">The most effective way to get these players involved is
+                    through a “learn to play hockey” program.</p>
+                <hr class="border-dashed border-1 mx-4  border-gray-200">
+            </div>
+            <div>
+                <div class="grid grid-cols-1  lg:grid-cols-6 gap-6">
+                    <!-- Junior program -->
+                    <div class="hero h-[30vh] lg:h-[50vh] grid-cols-1  lg:col-span-3 rounded-2xl overflow-hidden"
+                        style="background-image: url(./Images/5.png);">
+                        <div class="hero-overlay bg-opacity-60"></div>
+                        <div class="text-center px-2 lg:w-8/12 lg:text-start lg:-translate-x-12 lg:translate-y-12">
+                            <h1 class="lg:mb-5 text-xl lg:text-5xl font-bold text-white">Junior Program</h1>
+                            <p class="py-4 lg:mb-5 text-sm lg:text-base font-medium text-white">The registration fee of
+                                $97.81 includes the Hockey Victoria membership necessary for Term 2 & 3 programs.A
+                                player's starter pack including a stick and shin. </p>
+                            <button class="btn bg-button border-0 text-white text-lg font-bold lg:text-xl">Register
+                                Now!</button>
+                        </div>
+                    </div>
+                    <!-- teenager program -->
+                    <div class="hero h-[30vh] lg:h-[50vh] grid-cols-1  lg:col-span-3 rounded-2xl overflow-hidden"
+                        style="background-image: url(./Images/4.png);">
+                        <div class="hero-overlay bg-opacity-60"></div>
+                        <div class="text-center px-2  lg:w-8/12 lg:text-start lg:-translate-x-12 lg:translate-y-12">
+                            <h1 class="lg:mb-5 text-xl lg:text-5xl font-bold text-white">Teenager Program</h1>
+                            <p class="py-4 lg:mb-5 text-sm lg:text-base font-medium text-white">Our aim is to inspire
+                                young people to enjoy playing hockey. Our youth development programme is designed to
+                                cater for all levels of ability and help young. </p>
+                            <button class="btn bg-button border-0 text-white text-lg font-bold lg:text-xl">Register
+                                Now!</button>
+                        </div>
+                    </div>
+                    <!-- professional program -->
+                    <div class="hero h-[30vh] lg:h-[50vh] grid-cols-1 lg:col-span-6 rounded-2xl overflow-hidden"
+                        style="background-image: url(./Images/6.png);">
+                        <div class="hero-overlay bg-opacity-60"></div>
+                        <div class="text-center px-2  lg:w-6/12 lg:text-start lg:-translate-x-60 lg:translate-y-12	 ">
+                            <h1 class="lg:mb-5 text-xl lg:text-5xl font-bold text-white">Professional Program</h1>
+                            <p class="py-4 lg:mb-5 text-sm lg:text-base font-medium text-white">Many people can't
+                                playing hockey all time for their profession. we will arrange an program for them in
+                                holyday by simple registration.</p>
+                            <button class="btn bg-button border-0 text-white text-lg font-bold lg:text-xl">Register
+                                Now!</button>
+                            <!-- width: 50%;
+                            transform: translate(-226px, 54px); -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- new product section -->
+        <section class="mx-4 my-20 lg:my-8">
+            <hr class="border-dashed border-1 mx-4  border-gray-200">
+            <div class="space-y-4 my-8 text-center">
+                <h2 class="text-xl lg:text-4xl font-extrabold">Our New Products</h2>
+                <p class="text-sm lg:text-base font-medium text-slider-p-">An online shopping cart is software that
+                    makes it possible for customers to select products and buy them online. </p>
+                <hr class="border-dashed border-1 mx-4  border-gray-200">
+            </div>
+
+            <!-- cart section -->
+            <div class="grid gap-4 grid-cols-1 lg:grid-cols-2">
+                <!-- World Cup Flags Football cart -->
+                <div class="hero">
+                    <div class="hero-content  bg-base-100 rounded-xl shadow-xl flex-col lg:flex-row">
+                        <img src="./Images/7.png" class="w-full lg:w-1/3 rounded-lg" />
+                        <div>
+                            <!-- cart details -->
+                            <div class="card-body ">
+                                <div class="grid grid-cols-3 lg:w-fit gap-3 ">
+                                    <div class="text-gray-500"><i class="fa-solid fa-star text-star"></i>
+                                        <p class="inline-block text-base font-normal text-description">5.0</p>
+                                    </div>
+                                    <div class="text-gray-500"><i class="fa-regular fa-eye"></i>
+                                        <p class="inline-block text-base font-normal text-description">20</p>
+                                    </div>
+                                    <div class="text-gray-500"><i class="fa-regular fa-heart"></i>
+                                        <p class="inline-block text-base font-normal text-description">200</p>
+                                    </div>
+                                </div>
+                                <!-- cart content -->
+                                <div>
+                                    <h2 class="text-2xl font-bold">World Cup Flags Football</h2>
+                                    <p class="text-base font-normal text-gray-600 py-2">This jacket express world cup
+                                        flags
+                                        football.</p>
+                                </div>
+                                <!-- price -->
+                                <div class="grid grid-cols-2 w-max">
+                                    <p class="text-base font-extrabold text-red-500">Price - $22.00</p>
+                                    <div class=" text-gray-500">
+                                        <i class="fa-solid fa-cart-shopping lg:-translate-x-2"></i>
+                                        <p class="text-base font-normal inline-block">Delivery Fee : Free</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Green Football cart -->
+                <div class="hero ">
+                    <div class="hero-content  bg-base-100 rounded-xl shadow-xl  flex-col lg:flex-row">
+                        <img src="./Images/8.png" class="w-full lg:w-1/3 rounded-lg" />
+                        <div>
+                            <!-- cart details -->
+                            <div class="card-body">
+                                <div class="grid grid-cols-3 lg:w-fit gap-3">
+                                    <div class="text-gray-500"><i class="fa-solid fa-star text-star"></i>
+                                        <p class="inline-block text-base font-normal text-description">5.0</p>
+                                    </div>
+                                    <div class="text-gray-500"><i class="fa-regular fa-eye"></i>
+                                        <p class="inline-block text-base font-normal text-description">20</p>
+                                    </div>
+                                    <div class="text-gray-500"><i class="fa-regular fa-heart"></i>
+                                        <p class="inline-block text-base font-normal text-description">200</p>
+                                    </div>
+                                </div>
+                                <!-- cart content -->
+                                <div>
+                                    <h2 class="text-2xl font-bold">Green Football</h2>
+                                    <p class="text-base font-normal text-gray-600 py-2">Uncommon color football.</p>
+                                </div>
+                                <!-- price -->
+                                <div class="grid grid-cols-2 w-max">
+                                    <p class="text-base font-extrabold text-red-500">Price - $22.00</p>
+                                    <div class="text-gray-500">
+                                        <i class="fa-solid fa-cart-shopping lg:-translate-x-2"></i>
+                                        <p class="text-base font-normal inline-block">Delivery Fee : Free</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--  Cap For Hockeys cart -->
+                <div class="hero">
+                    <div class="hero-content  bg-base-100 shadow-xl rounded-xl flex-col lg:flex-row">
+                        <img src="./Images/9.png" class="w-full lg:w-1/3 rounded-lg " />
+                        <div>
+                            <!-- cart details -->
+                            <div class="card-body ">
+                                <div class="grid grid-cols-3 lg:w-fit gap-3 ">
+                                    <div class="text-gray-500"><i class="fa-solid fa-star text-star"></i>
+                                        <p class="inline-block text-base font-normal text-description">5.0</p>
+                                    </div>
+                                    <div class="text-gray-500"><i class="fa-regular fa-eye"></i>
+                                        <p class="inline-block text-base font-normal text-description">20</p>
+                                    </div>
+                                    <div class="text-gray-500"><i class="fa-regular fa-heart"></i>
+                                        <p class="inline-block text-base font-normal text-description">200</p>
+                                    </div>
+                                </div>
+                                <!-- cart content -->
+                                <div>
+                                    <h2 class="text-2xl font-bold">Cap For Hockeys</h2>
+                                    <p class="text-base font-normal text-gray-600 py-2">Cap protect hockey player from sun hit.</p>
+                                </div>
+                                <!-- price -->
+                                <div class="grid grid-cols-2 w-max">
+                                    <p class="text-base font-extrabold text-red-500">Price - $22.00</p>
+                                    <div class="text-gray-500">
+                                        <i class="fa-solid fa-cart-shopping lg:-translate-x-2"></i>
+                                        <p class="text-base font-normal inline-block">Delivery Fee : Free</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Blue Color T-shirt cart -->
+                <div class="hero">
+                    <div class="hero-content card card-side bg-base-100 rounded-xl shadow-xl flex-col lg:flex-row">
+                        <img src="./Images/10.png" class="w-full lg:w-1/3 rounded-lg " />
+                        <div>
+                            <!-- cart details -->
+                            <div class="card-body ">
+                                <div class="grid grid-cols-3 lg:w-fit gap-3 ">
+                                    <div class="text-gray-500"><i class="fa-solid fa-star text-star"></i>
+                                        <p class="inline-block text-base font-normal text-description">5.0</p>
+                                    </div>
+                                    <div class="text-gray-500"><i class="fa-regular fa-eye"></i>
+                                        <p class="inline-block text-base font-normal text-description">20</p>
+                                    </div>
+                                    <div class="text-gray-500"><i class="fa-regular fa-heart"></i>
+                                        <p class="inline-block text-base font-normal text-description">200</p>
+                                    </div>
+                                </div>
+                                <!-- cart content -->
+                                <div>
+                                    <h2 class="text-2xl font-bold">Color T-shirt</h2>
+                                    <p class="text-base font-normal text-gray-600 py-2">Italian t-shirt.</p>
+                                </div>
+                                <!-- price -->
+                                <div class="grid grid-cols-2 w-max">
+                                    <p class="text-base font-extrabold text-red-500">Price - $22.00</p>
+                                    <div class="text-gray-500">
+                                        <i class="fa-solid fa-cart-shopping lg:-translate-x-2"></i>
+                                        <p class="text-base font-normal inline-block">Delivery Fee : Free</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- helmet cart -->
+                <div class="hero">
+                    <div class="hero-content card card-side bg-base-100 rounded-xl shadow-xl flex-col lg:flex-row">
+                        <img src="./Images/11.png" class="w-full lg:w-1/3 rounded-lg " />
+                        <div>
+                            <!-- cart details -->
+                            <div class="card-body ">
+                                <div class="grid grid-cols-3 lg:w-fit gap-3 ">
+                                    <div class="text-gray-500"><i class="fa-solid fa-star text-star"></i>
+                                        <p class="inline-block text-base font-normal text-description">5.0</p>
+                                    </div>
+                                    <div class="text-gray-500"><i class="fa-regular fa-eye"></i>
+                                        <p class="inline-block text-base font-normal text-description">20</p>
+                                    </div>
+                                    <div class="text-gray-500"><i class="fa-regular fa-heart"></i>
+                                        <p class="inline-block text-base font-normal text-description">200</p>
+                                    </div>
+                                </div>
+                                <!-- cart content -->
+                                <div>
+                                    <h2 class="text-2xl font-bold">Helmet</h2>
+                                    <p class="text-base font-normal text-gray-600 py-2">Helmet for cricket player.</p>
+                                </div>
+                                <!-- price -->
+                                <div class="grid grid-cols-2 w-max">
+                                    <p class="text-base font-extrabold text-red-500">Price - $22.00</p>
+                                    <div class="text-gray-500">
+                                        <i class="fa-solid fa-cart-shopping lg:-translate-x-2"></i>
+                                        <p class="text-base font-normal inline-block">Delivery Fee : Free</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--  White football cart -->
+                <div class="hero">
+                    <div class="hero-content card card-side bg-base-100 rounded-xl shadow-xl flex-col lg:flex-row">
+                        <img src="./Images/12.png" class="max-w-sm rounded-lg "/>
+                        <div>
+                            <!-- cart details -->
+                            <div class="card-body ">
+                                <div class="grid grid-cols-3 lg:w-fit gap-3 ">
+                                    <div class="text-gray-500"><i class="fa-solid fa-star text-star"></i>
+                                        <p class="inline-block text-base font-normal text-description">5.0</p>
+                                    </div>
+                                    <div class="text-gray-500"><i class="fa-regular fa-eye"></i>
+                                        <p class="inline-block text-base font-normal text-description">20</p>
+                                    </div>
+                                    <div class="text-gray-500"><i class="fa-regular fa-heart"></i>
+                                        <p class="inline-block text-base font-normal text-description">200</p>
+                                    </div>
+                                </div>
+                                <!-- cart content -->
+                                <div>
+                                    <h2 class="text-2xl font-bold">White Football</h2>
+                                    <p class="text-base font-normal text-gray-600 py-2">White football for world cup.</p>
+                                </div>
+                                <!-- price -->
+                                <div class="grid grid-cols-2 w-max">
+                                    <p class="text-base font-extrabold text-red-500">Price - $22.00</p>
+                                    <div class="text-gray-500">
+                                        <i class="fa-solid fa-cart-shopping lg:-translate-x-2"></i>
+                                        <p class="text-base font-normal inline-block">Delivery Fee : Free</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- clients questions section -->
+        <section class="mx-4 my-20 lg:my-8">
+            <hr class="border-dashed border-1 mx-4  border-gray-200">
+            <div class="space-y-4 text-center">
+                <h2 class="mt-4 text-xl lg:text-4xl font-extrabold">Clients Question</h2>
+                <p class="text-sm lg:text-base font-medium text-slider-p lg:pb-10">Our clients can find out their desire answer in this section. </p>
+                <hr class="border-dashed border-1 mx-4  border-gray-200">
+            </div>
+
+            <!-- hero image -->
+            <div class="mt-10">
+                <div class="grid grid-cols-1 lg:grid-cols-10  border border-gray-300 rounded-xl p-6">
+                    <div class="col-span-4">
+                        <img src="Images/13.png" class="h-[30vh] w-[100vw] rounded-lg lg:h-[386px] lg:w-[80%]" />
+                    </div>
+                    <div class="col-span-6 divide-y divide-solid ">
+                        <!-- Right side Question  -->
+                        <!-- 1st question -->
+                        <div class="collapse collapse-arrow ">
+                            <input type="radio" name="my-accordion-2" checked="checked" />
+                            <div class="collapse-title text-xl font-medium">
+                                Our Equipment
+                            </div>
+                            <div class="collapse-content">
+                                <p>hello</p>
+                            </div>
+                        </div>
+                        <!-- 2nd question -->
+                        <div class="collapse collapse-arrow ">
+                            <input type="radio" name="my-accordion-2" />
+                            <div class="collapse-title text-xl font-medium">
+                                Hockey Training </div>
+                            <div class="collapse-content">
+                                <p>hello</p>
+                            </div>
+                        </div>
+                        <!-- 3rd question -->
+                        <div class="collapse collapse-arrow ">
+                            <input type="radio" name="my-accordion-2" />
+                            <div class="collapse-title text-xl font-medium">
+                                Private Lessons
+                            </div>
+                            <div class="collapse-content">
+                                <p>hello</p>
+                            </div>
+                        </div>
+                        <!-- 4th question -->
+                        <div class="collapse collapse-arrow ">
+                            <input type="radio" name="my-accordion-2" />
+                            <div class="collapse-title text-xl font-medium">
+                                Ski Touring
+                            </div>
+                            <div class="collapse-content">
+                                <p>hello</p>
+                            </div>
+                        </div>
+                        <!-- 5th question -->
+                        <div class="collapse collapse-arrow ">
+                            <input type="radio" name="my-accordion-2" />
+                            <div class="collapse-title text-xl font-medium">
+                                Booking
+                            </div>
+                            <div class="collapse-content">
+                                <p>hello</p>
+                            </div>
+                        </div>
+                        <!-- 6th question -->
+                        <div class="collapse collapse-arrow ">
+                            <input type="radio" name="my-accordion-2" />
+                            <div class="collapse-title text-xl font-medium">
+                                Pricings
+                            </div>
+                            <div class="collapse-content">
+                                <p>hello</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- get in touch form section -->
+        <section class="mx-4 my-20 lg:my-8">
+            <hr class="border-dashed border-1 mx-4  border-gray-200">
+            <div class="space-y-4 my-8 text-center">
+                <h2 class="text-xl lg:text-4xl font-extrabold">Get In Touch</h2>
+                <p class="text-sm lg:text-base font-medium text-slider-p-">People can contact us by phone, email and search our location by google map. </p>
+            </div>
+            <hr class="border-dashed border-1 mx-4  border-gray-200">
+            <div class="grid grid-cols-1 lg:grid-cols-12 lg:gap-x-10 my-10">
+                <!-- contact part -->
+                <div class="col-span-4 mb-8">
+                    <div class="grid gap-4 border border-gray-300 rounded-xl p-6">
+                        <div class="grid items-center justify-items-start h-[200px]  bg-phone rounded-lg p-5">
+                            <img src="Images/phone.png">
+                            <p class="text-base font-normal">Phone Number</p>
+                            <strong class="text-base font-bold">(+62)123-321-543</strong>
+                        </div>
+                        <div class="grid items-center justify-items-start  h-[200px]  bg-email rounded-lg p-5">
+                            <img src="Images/message.png" class="">
+                            <p class="text-base font-normal">Email</p>
+                            <strong class="text-base font-bold">hockeys@support.com</strong>
+                        </div>
+                        <div class="grid items-center justify-items-start h-[200px]  bg-map rounded-lg p-5">
+                            <img src="Images/map.png" class="">
+                            <p class="text-base font-normal">Location</p>
+                            <strong class="text-base font-bold">Uttara, Dhaka 1230</strong>
+                        </div>
+                    </div>
+                </div>
+                <!-- form part -->
+                <div class="col-span-8">
+                    <form class="">
+                        <!-- 1st colum -->
+                        <div class="grid gap-4 grid-cols-1 lg:grid-cols-2">
+                            <div>
+                                <label class="text-xl font-bold" for="name">Your Name</label>
+                                <input type="text" placeholder="Enter your full name"
+                                    class="mt-2 input input-bordered w-full " required />
+                            </div>
+                            <div>
+                                <label class="text-xl font-bold" for="email">Your Email</label>
+                                <input type="text" placeholder="Enter your Email"
+                                    class="mt-2 input input-bordered w-full " required />
+                            </div>
+                            <div>
+                                <label class="text-xl font-bold" for="subject">Subject</label>
+                                <input type="text" placeholder="Enter your subject"
+                                    class="mt-2 input input-bordered w-full " required />
+                            </div>
+                            <div>
+                                <label class="text-xl font-bold" for="phone number">Phone Number</label>
+                                <input type="number" placeholder="Enter your phone number"
+                                    class="mt-2 input input-bordered w-full " required />
+                            </div>
+                        </div>
+                        <!-- text area -->
+                        <div class="mt-4">
+                            <label class="text-xl font-bold" for="message">Message</label>
+                            <textarea class="textarea textarea-bordered w-full mt-2" placeholder="Write your message"
+                                rows="12"></textarea>
+                        </div>
+                        <div>
+                            <button class="btn bg-button text-lg font-bold text-white w-full mt-8">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- social media section -->
+        <section class="mx-4 my-20 lg:my-8 text-center bg-gray-100 rounded-xl py-10">
+            <h2 class="text-2xl font-extrabold mb-4 text-black">Social Media</h2>
+            <div class="grid justify-center">
+                <ul class="grid grid-cols-4 gap-6">
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="fa-brands fa-facebook-f"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-github"></i></li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class=" footer p-10 text-base-content bg-black bg-fixed bg-cover greed justify-center lg:justify-between">
+        <aside class=" text-slider-p greed justify-items-center text-center lg:justify-items-start lg:text-start">
+            <h3 class="text-2xl font-bold text-white">Get In Touch</h3>
+            <p class="py-4 text-gray-500">Uttara, Dhaka 1230 <br> Bangladesh</p>
+            <div>
+                <i class="fa-regular fa-envelope text-red-500 mr-3"></i>
+                <p class="inline-block text-base font-normal text-gray-500">hockeys@support.com</p>
+            </div>
+            <div class="class= py-4">
+                <i class="fa-solid fa-phone text-red-500 mr-3"></i>
+                <p class="inline-block text-base font-normal text-gray-500">(+62) 123-321-543</p>
+            </div>
+        </aside>
+        <nav
+            class="text-gray-500 greed justify-items-center text-center lg:justify-items-start lg:text-start transform translate-y-1/4 -translate-x-16 space-y-6 lg:transform lg:-translate-y-0 lg:translate-x-0">
+            <header class="text-white font-bold">Company</header>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Leadership</a>
+            <a class="link link-hover">Careers</a>
+            <a class="link link-hover">News & Article</a>
+            <a class="link link-hover">Legal Notice</a>
+        </nav>
+        <nav
+            class="text-gray-500 greed justify-items-center text-center lg:justify-items-start lg:text-start transform -translate-y-64 translate-x-40 space-y-6 lg:transform lg:-translate-y-0 lg:translate-x-0">
+            <header class="text-white font-bold">Support</header>
+            <a class="link link-hover">Help Center</a>
+            <a class="link link-hover">FAQ</a>
+            <a class="link link-hover">Ticket Support</a>
+            <a class="link link-hover">Contact Us</a>
+        </nav>
+        <nav
+            class="text-gray-500 greed justify-items-center text-center lg:justify-items-start lg:text-start transform -translate-y-2/4 translate-x-10 space-y-6 lg:transform lg:-translate-y-0 lg:translate-x-0">
+            <header class="text-white font-bold">Services</header>
+            <a class="link link-hover">Academy</a>
+            <a class="link link-hover">Group Lesson</a>
+            <a class="link link-hover">Private Lesson</a>
+            <a class="link link-hover">Hockeys for kids</a>
+            <a class="link link-hover">Hockeys for Adult</a>
+        </nav>
+    </footer>
+</body>
+
+</html>
